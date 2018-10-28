@@ -1,0 +1,18 @@
+﻿<Window x:Class="MusicTeacher.Views.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicTeacher.Views"
+        xmlns:mvvm="http://prismlibrary.com/"
+        xmlns:resources="clr-namespace:MusicTeacher.Resources"
+        mvvm:ViewModelLocator.AutoWireViewModel="True"        
+        Background="DarkGray"
+        WindowState="Maximized"
+        Title="{x:Static resources:SharedResources.MusicTeacher}" Height="450" Width="800">
+   
+    <StackPanel Orientation="Vertical" Margin="10">
+        <Button Content="{x:Static resources:SharedResources.CordPresenter}" Command="{Binding CordPresenterCommand}"/>
+        <Button Content="{x:Static resources:SharedResources.CordTranspose}" Command="{Binding CordTransponseCommand}"/>
+    </StackPanel>
+</Window>
